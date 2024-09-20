@@ -1,0 +1,37 @@
+\documentclass[a4paper,12pt]{book}     % 
+\usepackage[utf8]{inputenc}            % for input encoding
+\usepackage{amsmath,amsfonts,amssymb}  % for mathematical symbols and fonts
+\usepackage{graphicx}                  % for including images
+\usepackage{hyperref}                  % for clickable links in the document
+\usepackage{geometry}                  % for page layout
+\usepackage{natbib}                    % for bibliography management
+\usepackage{setspace}                  % for controlling line spacing
+\usepackage{caption}                   % to manage figure/table captions
+
+\geometry{margin=25.4mm}               % set the margin 
+\doublespacing                         % for double line spacing, common in theses
+\setcounter{secnumdepth}{3}            % number sub-subsections
+\setcounter{tocdepth}{3}               % depth of table of contents
+
+\begin{document}
+
+\title{There\'s a closed door at the end of a corridor}
+\author{Mauricio van der Maesen de Sombreff}
+\date{\today}                          % sets date to today, or specify a date
+
+\maketitle                             % generate the title page
+
+\tableofcontents                       % generate the table of contents
+
+\listoffigures                          % list of figures
+\listoftables                           % list of tables
+
+% include chapters
+\include{introduction}
+\include{chapter01}
+
+\renewcommand{\bibname}{References}  % Change the name of the bibliography section
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
