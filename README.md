@@ -7,7 +7,7 @@ The thesis is written in [LaTeX](https://www.tug.org/texlive/quickinstall.html) 
 
 * [README.md](README.md) - This file
 * [thesis.pdf](thesis.pdf) - This thesis compiled as a pdf document
-* [index.html](web/index.html) - This thesis exported as a website
+* [index.html](public/index.html) - This thesis exported as a website
 * [thesis.tex](thesis.tex) - Document structure and configuration
 * [references.bib](references.bib) - References and bibliography
 * [introduction.tex](introduction.tex) - Introduction
@@ -47,7 +47,7 @@ pdflatex thesis.tex
 
 Aditionally, the thesis is exported as an HTML web page using 
 ```
-latex2html -mkdir -dir web thesis.tex
+latex2html -mkdir -dir public thesis.tex
 ```
 
 ## Code Repository
