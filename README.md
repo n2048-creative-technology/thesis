@@ -2,16 +2,20 @@
 
 The thesis is written in [LaTeX](https://www.tug.org/texlive/quickinstall.html) and managed as code.
 
-# File structure
-
+## File structure
 
 * [README.md](README.md) - This file
 * [thesis.pdf](thesis.pdf) - This thesis compiled as a pdf document
-* [index.html](public/index.html) - This thesis exported as a website
 * [thesis.tex](thesis.tex) - Document structure and configuration
 * [references.bib](references.bib) - References and bibliography
 * [introduction.tex](introduction.tex) - Introduction
 * [chapter01.tex](chapter01.tex) - Chapter 1
+* [deploy.yml](.github/workflows/deploy.yml) - Automatic deployment settings
+
+## Automated deployment 
+
+Every time the repository is updated, the contents of the docs folder (website version of this thesis) will be exported to 
+[this link](https://n2048-creative-technology.github.io/thesis/)
 
 ## Install LaTex
 ```
