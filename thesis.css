@@ -62,3 +62,4 @@ TABLE		{ border-collapse: collapse; }
 /* document-specific styles come next */
 DIV.navigation		{   }
 SPAN.arabic		{   }
+SPAN.textit		{ font-style: italic  }
