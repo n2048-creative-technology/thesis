@@ -6,10 +6,11 @@ The thesis is written in [LaTeX](https://www.tug.org/texlive/quickinstall.html) 
 
 * [README.md](README.md) - This file
 * [thesis.pdf](thesis.pdf) - This thesis compiled as a pdf document
-* [thesis.tex](thesis.tex) - Document structure and configuration
-* [references.bib](references.bib) - References and bibliography
-* [introduction.tex](introduction.tex) - Introduction
-* [chapter01.tex](chapter01.tex) - Chapter 1
+* [thesis.tex](src/thesis.tex) - Document structure and configuration
+* [references.bib](src/references.bib) - References and bibliography
+* [introduction.tex](src/introduction.tex) - Introduction
+* [chapter01.tex](src/chapte01.tex) - Chapter 1
+* [create.sh](create.sh) - Compilation script
 * [deploy.yml](.github/workflows/deploy.yml) - Automatic deployment settings
 
 ## Automated deployment 
