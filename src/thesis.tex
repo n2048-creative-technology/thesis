@@ -57,29 +57,19 @@
 
 \maketitle                             % generate the title page
 
+% Clear the shipout picture to remove background image for the TOC
+\ClearShipoutPicture
+
 \clearpage  % Move to the next page (to avoid background on TOC)
 \pagestyle{empty}  % No page number on the TOC
 \tableofcontents   % No background image for Table of Contents
 
-% Clear the shipout picture to remove background image for the TOC
-\ClearShipoutPicture
-
 \newpage  % Move to the next page after TOC
 \pagestyle{plain}  % Start page numbering again
 
-
-% \listoffigures                          % list of figures
-% \listoftables                           % list of tables
-
-% include chapters
-\BackgroundPicOtherPages
 \include{introduction}
-
-BackgroundPicOtherPages
-\include{chapter01}
-
-% \afterpage{\BackgroundPicOtherPages}
-% \include{readings}
+\include{memory}
+\include{readings}
 
 \renewcommand{\bibname}{References}  % Change the name of the bibliography section
 \bibliographystyle{plainnat}
