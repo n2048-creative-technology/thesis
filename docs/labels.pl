@@ -7,11 +7,11 @@ $external_labels{$key} = "$URL/" . q|node6.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_chun2017/;
-$external_labels{$key} = "$URL/" . q|node6.html|; 
+$external_labels{$key} = "$URL/" . q|node5.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/cite_perec2011/;
-$external_labels{$key} = "$URL/" . q|node6.html|; 
+$external_labels{$key} = "$URL/" . q|node5.html|; 
 $noresave{$key} = "$nosave";
 
 1;
