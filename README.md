@@ -2,6 +2,14 @@
 
 The thesis is written in [LaTeX](https://www.tug.org/texlive/quickinstall.html) and managed as code.
 
+# File structure
+
+* [thesis.pdf](thesis.pdf) - Compiled pdf document
+* [thesis.tex](thesis.tex) - Document structure and configuration
+* [references.bib](references.bib) - References and bibliography
+* [introduction.tex](introduction.tex) - Introduction
+* [chapter01.tex](chapter01.tex) - Chapter 1
+
 ## Install LaTex
 ```
 curl -L -o install-tl-unx.tar.gz https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
