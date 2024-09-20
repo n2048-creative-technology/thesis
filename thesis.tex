@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{book}     % 
+\documentclass[a5paper,11pt]{book}     % 
 \usepackage[utf8]{inputenc}            % for input encoding
 \usepackage{amsmath,amsfonts,amssymb}  % for mathematical symbols and fonts
 \usepackage{graphicx}                  % for including images
@@ -8,8 +8,15 @@
 \usepackage{setspace}                  % for controlling line spacing
 \usepackage{caption}                   % to manage figure/table captions
 
-\geometry{margin=25.4mm}               % set the margin 
-\doublespacing                         % for double line spacing, common in theses
+\geometry{  % set the margins
+    a5paper,
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}             
+
+\doublespacing  % Use 1.5 line spacing
 \setcounter{secnumdepth}{3}            % number sub-subsections
 \setcounter{tocdepth}{3}               % depth of table of contents
 
