@@ -47,7 +47,7 @@ pdflatex thesis.tex
 
 Aditionally, the thesis is exported as an HTML web page using 
 ```
-latex2html -mkdir -dir public thesis.tex
+latex2html -mkdir -dir docs thesis.tex
 ```
 
 ## Code Repository
