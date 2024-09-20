@@ -9,7 +9,7 @@ The thesis is written in [LaTeX](https://www.tug.org/texlive/quickinstall.html) 
 * [thesis.tex](src/thesis.tex) - Document structure and configuration
 * [references.bib](src/references.bib) - References and bibliography
 * [introduction.tex](src/introduction.tex) - Introduction
-* [chapter01.tex](src/chapte01.tex) - Chapter 1
+* [memory.tex](src/memory.tex) - Chapter 1: memory
 * [create.sh](create.sh) - Compilation script
 * [deploy.yml](.github/workflows/deploy.yml) - Automatic deployment settings
 
