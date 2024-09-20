@@ -12,10 +12,10 @@ bibtex thesis
 pdflatex thesis.tex
 pdflatex thesis.tex
 
-mv thesis.pdf ../
-
 ## Create web version
 latex2html -mkdir -dir ../docs thesis.tex
+
+mv thesis.pdf ../docs/
 
 cd ..
 rm -rf ./build

@@ -5,7 +5,7 @@ The thesis is written in [LaTeX](https://www.tug.org/texlive/quickinstall.html) 
 ## File structure
 
 * [README.md](README.md) - This file
-* [thesis.pdf](thesis.pdf) - This thesis compiled as a pdf document
+* [thesis.pdf](https://n2048-creative-technology.github.io/thesis/thesis.pdf) - This thesis compiled as a pdf document
 * [thesis.tex](src/thesis.tex) - Document structure and configuration
 * [references.bib](src/references.bib) - References and bibliography
 * [introduction.tex](src/introduction.tex) - Introduction
