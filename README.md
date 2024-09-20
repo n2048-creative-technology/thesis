@@ -4,7 +4,10 @@ The thesis is written in [LaTeX](https://www.tug.org/texlive/quickinstall.html) 
 
 # File structure
 
-* [thesis.pdf](thesis.pdf) - Compiled pdf document
+
+* [README.md](README.md) - This file
+* [thesis.pdf](thesis.pdf) - This thesis compiled as a pdf document
+* [index.html](web/index.html) - This thesis exported as a website
 * [thesis.tex](thesis.tex) - Document structure and configuration
 * [references.bib](references.bib) - References and bibliography
 * [introduction.tex](introduction.tex) - Introduction
@@ -25,10 +28,15 @@ export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
 export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
 ```
 
-Install the compiler (if not installed)
+Install the compilers (if not installed)
 ```
 sudo apt install pdflatex
+sudo apt-get install latexml
+sudo apt-get install pandoc
+sudo apt-get install latex2html
 ```
+
+
 
 ## Compilation
 Compile the LaTeX documents to a PDF using the following commands: 
@@ -37,6 +45,10 @@ bibtex thesis
 pdflatex thesis.tex 
 ``` 
 
+Aditionally, the thesis is exported as an HTML web page using 
+```
+latex2html -mkdir -dir web thesis.tex
+```
 
 ## Code Repository
 The thesis is stored on [Github](https://github.com/n2048-creative-technology/thesis)
