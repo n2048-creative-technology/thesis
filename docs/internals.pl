@@ -7,11 +7,11 @@ $ref_files{$key} = "$dir".q|node6.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/cite_chun2017/;
-$ref_files{$key} = "$dir".q|node5.html|; 
+$ref_files{$key} = "$dir".q|node8.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/cite_perec2011/;
-$ref_files{$key} = "$dir".q|node5.html|; 
+$ref_files{$key} = "$dir".q|node8.html|; 
 $noresave{$key} = "$nosave";
 
 1;
