@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - main  # Adjust this to the branch you want the workflow to trigger on
-
+    paths:
+      - 'src/**'  # Trigger only if files in the src folder are changed
+  
 jobs:
   build:
     runs-on: ubuntu-latest
