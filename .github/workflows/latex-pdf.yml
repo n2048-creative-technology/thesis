@@ -15,10 +15,13 @@ jobs:
     - name: Set up LaTeX environment
       uses: dante-ev/latex-action@2023-A
       with:
-        root_file: src/thesis.tex  # Replace with your LaTeX file name
+        root_file: thesis.tex 
         output_directory: pdf
+        working_directory: src
+        compiler: lualatex
+        args: -interaction=nonstopmode -shell-escape
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.4.0
       with:
         name: compiled-pdf
-        path: pdf/thesis.pdf  # Replace with your actual LaTeX filename
+        path: pdf/thesis.pdf 
