@@ -29,7 +29,8 @@ jobs:
         with:
           working_directory: src
           root_file: thesis.aux
-          compiler: bibtex
+        	compiler: bibtex
+					args:
 
       # Second pass: Now that we have the bibliography, rerun pdflatex to include it
       - name: Second LaTeX run
