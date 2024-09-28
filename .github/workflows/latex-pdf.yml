@@ -10,17 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout
-
+    - name: Checkout
+      uses: actions/checkout@v4.2.0
     - name: Set up LaTeX environment
-      uses: dante-ev/latex-action
+      uses: dante-ev/latex-action@2023-A
       with:
         root_file: src/thesis.tex  # Replace with your LaTeX file name
-        output_directory: pdf_output
-
-    - name: Upload PDF artifact
-      uses: actions/upload-artifact
+        output_directory: pdf
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.4.0
       with:
         name: compiled-pdf
-        path: pdf_output/thesis.pdf  # Replace with your actual LaTeX filename
+        path: pdf/thesis.pdf  # Replace with your actual LaTeX filename
