@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main  # Adjust this to the branch you want the workflow to trigger on
- #   paths:
-  #    - 'src/**'  # Trigger only if files in the src folder are changed
+    paths:
+      - 'src/**'  # Trigger only if files in the src folder are changed
   
 permissions:
   contents: write  # Ensure the GITHUB_TOKEN has write permissions
