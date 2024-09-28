@@ -61,14 +61,8 @@ jobs:
       - name: Move PDF to root directory
         run: mv src/thesis.pdf ./thesis.pdf
 
-      # Commit the PDF to the repository
-      - name: Commit PDF to repository
+      - name: Commit & Push changes
+        uses: actions-js/push@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub-provided token
-        run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
-          git add thesis.pdf
-          git commit -m "Add generated thesis PDF"
-          git push
-
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message:	'autopublish ${date}'
