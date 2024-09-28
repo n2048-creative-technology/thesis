@@ -30,3 +30,8 @@ jobs:
           root_file: thesis.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
+      - name: pdflatex main
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf
+          path: src/thesis.pdf
