@@ -71,4 +71,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           message:	'autopublish ${date}'
+          force: true
 
