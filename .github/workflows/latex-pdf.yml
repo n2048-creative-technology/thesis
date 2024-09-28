@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main  # Adjust this to the branch you want the workflow to trigger on
-    paths:
-      - 'src/**'  # Trigger only if files in the src folder are changed
+ #   paths:
+  #    - 'src/**'  # Trigger only if files in the src folder are changed
   
 jobs:
   build:
@@ -28,7 +28,7 @@ jobs:
         uses: dante-ev/latex-action@latest
         with:
           working_directory: src
-          root_file: thesis
+          root_file: thesis.aux
           compiler: bibtex
 
       # Second pass: Now that we have the bibliography, rerun pdflatex to include it
