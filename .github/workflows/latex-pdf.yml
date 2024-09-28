@@ -16,7 +16,6 @@ jobs:
       uses: dante-ev/latex-action@2023-A
       with:
         root_file: thesis.tex 
-        output_directory: pdf
         working_directory: src
         compiler: lualatex
         args: -interaction=nonstopmode -shell-escape
@@ -24,4 +23,4 @@ jobs:
       uses: actions/upload-artifact@v4.4.0
       with:
         name: compiled-pdf
-        path: pdf/thesis.pdf 
+        path: src/thesis.pdf 
