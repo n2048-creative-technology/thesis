@@ -17,8 +17,6 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
 
-v2
-
       # First pass: Generate .aux file and other necessary auxiliary files
       - name: First LaTeX run (to generate aux files)
         uses: dante-ev/latex-action@latest
