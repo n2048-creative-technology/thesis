@@ -1,4 +1,4 @@
-name: Build LaTeX PDF
+jname: Build LaTeX PDF
 
 on:
   push:
@@ -72,4 +72,13 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           message:	'autopublish ${date}'
           force: true
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3  # This action simplifies the gh-pages deployment
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub-provided token
+          publish_dir: ./docs  # Specify the directory where your HTML files are located
+          destination_branch: gh-pages  # Specify the branch to push to
+
+
 
