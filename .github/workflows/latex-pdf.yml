@@ -11,16 +11,16 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout
 
     - name: Set up LaTeX environment
-      uses: dante-ev/latex-action@v2
+      uses: dante-ev/latex-action
       with:
         root_file: src/thesis.tex  # Replace with your LaTeX file name
         output_directory: pdf_output
 
     - name: Upload PDF artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact
       with:
         name: compiled-pdf
         path: pdf_output/thesis.pdf  # Replace with your actual LaTeX filename
