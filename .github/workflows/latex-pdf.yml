@@ -17,4 +17,68 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
 
-      
+v2
+
+      # First pass: Generate .aux file and other necessary auxiliary files
+      - name: First LaTeX run (to generate aux files)
+        uses: dante-ev/latex-action@latest
+        with:
+          working_directory: src
+          root_file: thesis.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+
+      # Run bibtex now that thesis.aux exists
+      - name: Run BibTeX
+        uses: dante-ev/latex-action@latest
+        with:
+          working_directory: src
+          root_file: thesis.aux
+          compiler: bibtex
+          args:
+
+      # Second pass: Now that we have the bibliography, rerun pdflatex to include it
+      - name: Second LaTeX run
+        uses: dante-ev/latex-action@latest
+        with:
+          working_directory: src
+          root_file: thesis.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+
+      # Third pass: Resolve cross-references and ensure the document is finalized
+      - name: Third LaTeX run
+        uses: dante-ev/latex-action@latest
+        with:
+          working_directory: src
+          root_file: thesis.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+
+      # Upload the final PDF as an artifact
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: thesis.pdf
+          path: src/thesis.pdf
+
+      # Move the PDF from src to the root directory
+      - name: Move PDF to root directory
+        run: |
+					rm -rf docs
+          mkdir -p docs
+          mv src/thesis.pdf docs/thesis.pdf
+
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message:	'autopublish ${date}'
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3  # This action simplifies the gh-pages deployment
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub-provided token
+          publish_dir: ./docs  # Specify the directory where your HTML files are located
+          destination_branch: gh-pages  # Specify the branch to push to
+
