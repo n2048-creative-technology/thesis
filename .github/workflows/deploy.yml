@@ -1,1 +1,27 @@
+name: Deploy web
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to the branch you want the workflow to trigger on
+    paths:
+      - 'build/**'  # Trigger only if files in the src folder are changed
+  
+permissions:
+  contents: write  # Ensure the GITHUB_TOKEN has write permissions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3  # This action simplifies the gh-pages deployment
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub-provided token
+          publish_dir: ./docs  # Specify the directory where your HTML files are located
+          destination_branch: gh-pages  # Specify the branch to push to
+
 
