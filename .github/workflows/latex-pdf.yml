@@ -66,12 +66,12 @@ jobs:
           mkdir -p docs
           mv src/thesis.pdf docs/thesis.pdf
 
-      - name: Commit & Push changes
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          message:	'autopublish ${date}'
-          force: true
+#      - name: Commit & Push changes
+#        uses: actions-js/push@master
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          message:	'autopublish ${date}'
+#          force: true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3  # This action simplifies the gh-pages deployment
