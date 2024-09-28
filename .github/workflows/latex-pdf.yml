@@ -8,19 +8,25 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4.2.0
-    - name: Set up LaTeX environment
-      uses: dante-ev/latex-action@2023-A
-      with:
-        root_file: thesis.tex 
-        working_directory: src
-        compiler: lualatex
-        args: -interaction=nonstopmode -shell-escape
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v4.4.0
-      with:
-        name: compiled-pdf
-        path: src/thesis.pdf 
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: pdflatex main
+        uses: dante-ev/latex-action@latest
+        with:
+          working_directory: src
+          root_file: thesis.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+      - name: bibtex main
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: thesis.aux
+          compiler: bibtex
+          args: 
+      - name: pdflatex main
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: thesis.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
