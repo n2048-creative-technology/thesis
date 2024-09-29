@@ -3,12 +3,12 @@ jname: Build LaTeX PDF
 on:
   push:
     branches:
-      - main  # Adjust this to the branch you want the workflow to trigger on
+      - main # Adjust this to the branch you want the workflow to trigger on
 #    paths:
 #      - 'src/**'  # Trigger only if files in the src folder are changed
-  
+
 permissions:
-  contents: write  # Ensure the GITHUB_TOKEN has write permissions
+  contents: write # Ensure the GITHUB_TOKEN has write permissions
 
 jobs:
   build:
@@ -53,32 +53,16 @@ jobs:
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
 
-#      # Upload the final PDF as an artifact
-#      - name: Upload PDF
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: thesis.pdf
-#          path: src/thesis.pdf
-
       # Move the PDF from src to the root directory
       - name: Move PDF to root directory
         run: |
           mkdir -p docs
           mv src/thesis.pdf docs/thesis.pdf
 
-#      - name: Commit & Push changes
-#        uses: actions-js/push@master
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
-#          message:	'autopublish ${date}'
-#          force: true
-
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3  # This action simplifies the gh-pages deployment
+        uses: peaceiris/actions-gh-pages@v3 
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub-provided token
-          publish_dir: ./docs  # Specify the directory where your HTML files are located
-          destination_branch: gh-pages  # Specify the branch to push to
-
-
-
+          github_token: ${{ secrets.GITHUB_TOKEN }} 
+          publish_dir: ./docs
+          destination_branch: gh-pages 
