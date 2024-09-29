@@ -7,15 +7,16 @@ The thesis is written in [LaTeX](https://www.tug.org/texlive/quickinstall.html) 
 * [README.md](README.md) - This file
 * [thesis.pdf](https://n2048-creative-technology.github.io/thesis/thesis.pdf) - This thesis compiled as a pdf document
 * [thesis.tex](src/thesis.tex) - Document structure and configuration
-* [references.bib](src/references.bib) - References and bibliography
+* [references.bib](src/thesis.bib) - References and bibliography
 * [introduction.tex](src/introduction.tex) - Introduction
 * [memory.tex](src/memory.tex) - Chapter 1: memory
 * [create.sh](create.sh) - Compilation script
+* [latex-pdf.yml](.github/workflows/latex-pdf.yml) - Automatic deployment settings
 * [deploy.yml](.github/workflows/deploy.yml) - Automatic deployment settings
 
 ## Automated deployment 
 
-Every time the repository is updated, the contents of the docs folder (website version of this thesis) will be exported to 
+Every time the text is updated, the code will be compiled into a PDF and it will be made accessible via 
 [this link](https://n2048-creative-technology.github.io/thesis/)
 
 ## Install LaTex
