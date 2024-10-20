@@ -54,7 +54,7 @@ jobs:
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
 
-      # Move the PDF from src to the root directory
+      # Move the PDF from src to the docs directory
       - name: Move PDF to root directory
         run: |
           mkdir -p docs
