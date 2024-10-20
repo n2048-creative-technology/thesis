@@ -6,6 +6,7 @@ on:
       - main # Adjust this to the branch you want the workflow to trigger on
     paths:
       - "src/**" # Trigger if files in the src folder are changed
+      - ".github/workflows/latex-pdf.yml"
 
 permissions:
   contents: write # Ensure the GITHUB_TOKEN has write permissions
