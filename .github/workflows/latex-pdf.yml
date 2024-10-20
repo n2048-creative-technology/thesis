@@ -7,7 +7,8 @@ on:
     paths:
       - "src/**" # Trigger if files in the src folder are changed
       - "docs/**" # Trigger if files in the src folder are changed
-      
+      - ".github/workflows/**"
+
 permissions:
   contents: write # Ensure the GITHUB_TOKEN has write permissions
 
