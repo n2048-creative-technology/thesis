@@ -6,8 +6,6 @@ on:
       - main # Adjust this to the branch you want the workflow to trigger on
     paths:
       - "src/**" # Trigger if files in the src folder are changed
-      - "docs/**" # Trigger if files in the src folder are changed
-      - ".github/workflows/**"
 
 permissions:
   contents: write # Ensure the GITHUB_TOKEN has write permissions
@@ -60,11 +58,3 @@ jobs:
         run: |
           mkdir -p docs
           mv src/thesis.pdf docs/thesis.pdf
-
-      # Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-          publish_branch: gh-pages
