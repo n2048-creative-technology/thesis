@@ -18,7 +18,7 @@ The thesis is written in [LaTeX](https://www.tug.org/texlive/quickinstall.html) 
 Every time the text is updated, the code will be compiled into a PDF and it will be made accessible via 
 [this link](https://n2048-creative-technology.github.io/thesis/)
 
-[![READ PDF]((https://n2048-creative-technology.github.io/thesis/)]((https://n2048-creative-technology.github.io/thesis/)
+[![READ PDF](https://n2048-creative-technology.github.io/thesis/)](https://n2048-creative-technology.github.io/thesis/)
 
 
 ## Install LaTex
