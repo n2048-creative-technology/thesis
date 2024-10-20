@@ -5,8 +5,9 @@ on:
     branches:
       - main # Adjust this to the branch you want the workflow to trigger on
     paths:
-      - "src/**" # Trigger only if files in the src folder are changed
-
+      - "src/**" # Trigger if files in the src folder are changed
+      - "docs/**" # Trigger if files in the src folder are changed
+      
 permissions:
   contents: write # Ensure the GITHUB_TOKEN has write permissions
 
