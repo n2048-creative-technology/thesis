@@ -57,3 +57,8 @@ latex2html -mkdir -dir docs thesis.tex
 
 ## Code Repository
 The thesis is stored on [Github](https://github.com/n2048-creative-technology/thesis)
+
+Example of code -> render:
+![sample](https://github.com/user-attachments/assets/d93aea0f-83b5-45f1-b4ce-7b8373c92082)
+
+
