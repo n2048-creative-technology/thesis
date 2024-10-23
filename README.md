@@ -8,7 +8,7 @@ The thesis is written in [LaTeX](https://www.tug.org/texlive/quickinstall.html) 
 * [thesis.pdf](https://n2048-creative-technology.github.io/thesis/thesis.pdf) - This thesis compiled as a pdf document
 * [thesis.tex](src/thesis.tex) - Document structure and configuration
 * [thesis.bib](src/thesis.bib) - References and bibliography
-* [****CHAPTERS****.tex](src/*.tex) - Text/code for every chapter
+* [****CHAPTERS****.tex](src/) - Text/code for every chapter
 * [create.sh](create.sh) - Compilation script
 * [latex-pdf.yml](.github/workflows/latex-pdf.yml) - Automatic deployment settings
 * [deploy.yml](.github/workflows/deploy.yml) - Automatic deployment settings
