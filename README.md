@@ -1,5 +1,7 @@
 # thesis
 
+Title: 
+
 The thesis is written in [LaTeX](https://www.tug.org/texlive/quickinstall.html) and managed as code.
 
 ## File structure
@@ -50,15 +52,10 @@ bibtex thesis
 pdflatex thesis.tex 
 ``` 
 
-Aditionally, the thesis is exported as an HTML web page using 
-```
-latex2html -mkdir -dir docs thesis.tex
-```
-
 ## Code Repository
 The thesis is stored on [Github](https://github.com/n2048-creative-technology/thesis)
 
 Example of code -> render:
-![sample](https://github.com/user-attachments/assets/d93aea0f-83b5-45f1-b4ce-7b8373c92082)
+![sample](./src/assets/e31c2932de04582b03825a40f7317978.jpg)
 
 
