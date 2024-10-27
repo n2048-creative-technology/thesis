@@ -64,5 +64,3 @@ The thesis is stored on [Github](https://github.com/n2048-creative-technology/th
 
 Example of code -> render:
 ![sample](./src/assets/e31c2932de04582b03825a40f7317978.jpg)
-
-
