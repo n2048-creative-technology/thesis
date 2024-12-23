@@ -12,7 +12,11 @@
 \usepackage{geometry}                  % for page layout
 \usepackage{natbib}                    % for bibliography management
 \usepackage{setspace}                  % for controlling line spacing
+\usepackage{xcolor}
 
+% Define colors
+\definecolor{comment}{rgb}{0.0, 0.5, 0.0} % A darker green
+\definecolor{white}{rgb}{1.0, 1.0, 1.0}
 
 \geometry{  % set the margins
     a4paper,
@@ -21,7 +25,6 @@
     top=2.5cm,
     bottom=2.5cm
 }             
-
 
 % Command to set the background image for a single page
 \newcommand\BackgroundPicFrontPage{
@@ -32,15 +35,8 @@
   }
 }
 
-% Command to set a different background image for subsequent pages
-\newcommand\BackgroundPicOtherPages{
-  \AddToShipoutPictureBG*{
-    \AtPageLowerLeft{
-      \includegraphics[width=\paperwidth,height=\paperheight]{assets/background.png}
-    }
-  }
-}
-
+% Switch to monospace font globally
+\renewcommand{\familydefault}{\ttdefault}
 
 \doublespacing  % Use 1.5 line spacing
 \setcounter{secnumdepth}{3}            % number sub-subsections
@@ -51,14 +47,15 @@
 % Set the front page background image
 \BackgroundPicFrontPage
 
-\title{There is a closed door at the end of the corridor}
-\author{Mauricio van der Maesen de Sombreff}
+\title{\textbf{There is a closed door at the end of the corridor}}
+\author{\textbf{Mauricio van der Maesen de Sombreff}}
 \date{\today}  % sets date to today, or specify a date
 
 \maketitle     % generate the title page
 
-% Clear the shipout picture to remove background image for the TOC
+% Reset color after front page
 \ClearShipoutPicture
+\color{black}
 
 \clearpage  % Move to the next page (to avoid background on TOC)
 \pagestyle{empty}  % No page number on the TOC
@@ -67,6 +64,7 @@
 \newpage  % Move to the next page after TOC
 \pagestyle{plain}  % Start page numbering again
 
+\include{preface}
 \include{introduction}
 \include{curiosity}
 \include{neurodiversity}
