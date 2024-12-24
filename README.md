@@ -1,3 +1,5 @@
+![sample](./src/assets/cover-01.png)
+
 # There is a closed door at the end of the corridor
 
 The title for this thesis comes from an early memory. Without an abundance of organized memories, I clearly remember this corridor in the house where I grew up. It connected the apartment bedrooms to the living room. It was a long corridor and at night the door was always closed, and the light from the other side would squeeze around it through the frame.
