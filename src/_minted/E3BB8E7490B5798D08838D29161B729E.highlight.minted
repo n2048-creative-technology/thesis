@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{w} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{w = }\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s1}{; print(w.format(chr(39), w, chr(39)))}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{;}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{w}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n+nb}{chr}\PYG{p}{(}\PYG{l+m+mi}{39}\PYG{p}{)}\PYG{p}{,} \PYG{n}{w}\PYG{p}{,} \PYG{n+nb}{chr}\PYG{p}{(}\PYG{l+m+mi}{39}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}
+\end{MintedVerbatim}
