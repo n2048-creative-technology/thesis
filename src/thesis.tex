@@ -14,7 +14,7 @@
 
 \usepackage{fancyhdr}
 \usepackage{hyperref}                  % for clickable links in the document
-\usepackage{geometry}                  % for page layout
+\usepackage[a5paper, margin=0cm]{geometry} % for page layout
 \usepackage{natbib}                    % for bibliography management
 \usepackage{setspace}                  % for controlling line spacing
 \usepackage{xcolor}
@@ -33,12 +33,12 @@
 
 \geometry{
     a5paper,         % Set the paper size to A5
-    inner=25mm,      % Inner margin for binding
-    outer=20mm,      % Outer margin
-    top=25mm,        % Top margin
-    bottom=20mm,     % Bottom margin
-    headsep=10mm,    % Space between header and text
-    footskip=10mm,   % Space between footer and text
+    inner=15mm,      % Inner margin for binding (reduced from 25mm)
+    outer=12mm,      % Outer margin (reduced from 20mm)
+    top=15mm,        % Top margin (reduced from 25mm)
+    bottom=12mm,     % Bottom margin (reduced from 20mm)
+    headsep=7mm,     % Space between header and text (proportional to A5)
+    footskip=7mm,    % Space between footer and text (proportional to A5)
     includehead,     % Include header in margin calculations
     includefoot,     % Include footer in margin calculations
 }
@@ -89,7 +89,25 @@
 
 % \clearpage  % Move to the next page (to avoid background on TOC)
 \pagestyle{empty}  % No page number on the TOC
-\tableofcontents   
+
+{
+    \newgeometry{
+        a5paper,         % Set the paper size to A5
+        inner=15mm,      % Inner margin for binding (reduced from 25mm)
+        outer=12mm,      % Outer margin (reduced from 20mm)
+        top=10mm,        % Top margin (reduced from 25mm)
+        bottom=7mm,     % Bottom margin (reduced from 20mm)
+        headsep=2mm,     % Space between header and text (proportional to A5)
+        footskip=2mm,    % Space between footer and text (proportional to A5)
+        includehead,     % Include header in margin calculations
+        includefoot,     % Include footer in margin calculations
+    }  
+    \tableofcontents
+    \clearpage % Ensure new page for subsequent content
+    \restoregeometry % Restore original margins
+}
+
+\pagestyle{empty}  % No page number on the TOC
 
 \newpage  % Move to the next page after TOC
 \pagestyle{plain}  % Start page numbering again
