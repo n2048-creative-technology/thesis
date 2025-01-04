@@ -91,20 +91,21 @@
 
 % \clearpage  % Move to the next page (to avoid background on TOC)
 \pagestyle{empty}  % No page number on the TOC
-
 {
     \newgeometry{
         a5paper,         % Set the paper size to A5
         inner=15mm,      % Inner margin for binding (reduced from 25mm)
         outer=12mm,      % Outer margin (reduced from 20mm)
-        top=10mm,        % Top margin (reduced from 25mm)
-        bottom=7mm,     % Bottom margin (reduced from 20mm)
+        top=2mm,        % Top margin (reduced from 25mm)
+        bottom=12mm,     % Bottom margin (reduced from 20mm)
         headsep=2mm,     % Space between header and text (proportional to A5)
-        footskip=2mm,    % Space between footer and text (proportional to A5)
+        footskip=7mm,    % Space between footer and text (proportional to A5)
         includehead,     % Include header in margin calculations
         includefoot,     % Include footer in margin calculations
     }  
+    \small 
     \tableofcontents
+    \normalsize
     \clearpage % Ensure new page for subsequent content
     \restoregeometry % Restore original margins
 }
@@ -125,10 +126,6 @@
 \include{wave-function-collapse}
 \include{emulation}
 \include{decay}
-%\include{readings}
-
-\renewcommand{\bibname}{References}  % Change the name of the bibliography section
-\bibliographystyle{plainnat}
-\bibliography{thesis}
+\include{readings}
 
 \end{document}
