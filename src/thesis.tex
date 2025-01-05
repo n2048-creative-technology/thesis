@@ -6,27 +6,29 @@
 \usepackage{eso-pic}     % Allows adding elements to the page background
 \usepackage{graphicx}    % For including images
 \usepackage{afterpage}   % To control background images after specific pages
+
 \usepackage{listings}
 \lstset{
     language=Python,        % Set language to Python
     showstringspaces=false  % Prevent spaces from being printed as visible characters
 }
 
-\usepackage[colorlinks=false]{hyperref}
-\usepackage{footnotebackref}
-\usepackage[hang, flushmargin]{footmisc}
 \usepackage[a5paper, margin=0cm]{geometry} % for page layout
 \usepackage{natbib}                    % for bibliography management
 \usepackage{setspace}                  % for controlling line spacing
 \usepackage{xcolor}
-
-% Additional packages for consistent layout
 \usepackage{fancyhdr}  % For custom headers and footers
+\usepackage{microtype}       % Improves justification and spacing
+
+\usepackage[colorlinks=false, linktoc=all]{hyperref}
+\usepackage{footnotebackref}
+\usepackage[hang, flushmargin]{footmisc}
+\usepackage[english]{babel}
+
 \pagestyle{fancy}      % Set the page style to fancy
 \fancyhf{}             % Clear all header and footer fields
 \fancyhead[LE,RO]{\thepage} % Page numbers on the outer side
 \fancyhead[LO,RE]{\nouppercase{\leftmark}} % Chapter titles in headers
-
 
 % Define colors
 \definecolor{comment}{rgb}{0.0, 0.5, 0.0} % A darker green
@@ -68,10 +70,6 @@
 \clubpenalty=10000           % Avoid club lines (single lines at the bottom of a page)
 \brokenpenalty=10000         % Avoid page breaks inside paragraphs
 \raggedbottom                % Avoid stretching the page vertically
-
-% Font and text spacing adjustments
-\usepackage{microtype}       % Improves justification and spacing
-
 
 \begin{document}
 
